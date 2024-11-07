@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: docker-api
+  ports:
+  - port: 3030
+    targetPort: 3000
